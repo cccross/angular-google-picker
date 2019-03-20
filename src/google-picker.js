@@ -133,7 +133,7 @@
               (scope.onCancel || angular.noop)();
             }
             if (data.action == google.picker.Action.PICKED && scope.onPicked) {
-              (scope.onPicked || angular.noop)({docs: data.docs});
+              (scope.onPicked || angular.noop)({docs: data.docs, accessToken: accessToken});
             }
             scope.$apply();
           });
